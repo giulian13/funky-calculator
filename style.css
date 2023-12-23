@@ -2,6 +2,13 @@
   all: unset;
 }
 
+ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-image: url("/img/background.jpg");
   background-repeat: no-repeat;
@@ -13,12 +20,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 main {
+  position: relative;
+  top: -100px;
   background-color: white;
   opacity: 0.9;
-  height: 450px;
+  height: 430px;
   width: 400px;
 
   border-top-right-radius: 25px;
@@ -26,9 +36,47 @@ main {
 }
 
 .screen {
-  background-color: rgb(251, 216, 27);
+  background-color: rgb(251, 173, 29);
   height: 100px;
   width: 400px;
 
   border-top-right-radius: 25px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.mainScreen {
+  background-color: rgb(251, 173, 29);
+  border: none;
+
+  height: 76%;
+  width: 98%;
+
+  padding: 2px 10px;
+  margin-bottom: 5px;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  align-items: end;
+
+  font-size: 40px;
+}
+
+.buttons {
+  background-color: white;
+  color: grey;
+
+  border: 0.7px solid grey;
+
+  font-size: 40px;
+
+  cursor: pointer;
+}
+
+.buttons:hover {
+  background-color: grey;
+  color: white;
 }
